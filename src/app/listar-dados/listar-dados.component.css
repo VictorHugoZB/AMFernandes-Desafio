@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.tabela-imoveis{
+    font-family: Arial, sans-serif;
+    font-size: 0.95em;
+    border-collapse: collapse;
+    text-align: center;
+    width: 80%;
+    margin: 20vh auto;
+}
+
+.tabela-header th, .tabela-body td{
+    border: 1px solid rgb(158, 158, 158);
+    height: 50px;
+    min-width: 140px;
+    padding: 0 10px;
+}
+
+.tabela-header th{
+    background-color: #00355e;
+    color: #fff;
+}
+
+.tabela-body tr:nth-child(even){
+    background-color: rgb(240, 240, 240);
+}
+
+.tabela-body a{
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+}
+
+.all-arrows-container{
+    display: inline-block;
+}
+
+.arrow-container{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    border: 2px #000 solid;
+    margin: 0 2px;
+    background-color: rgb(255, 255, 255);
+    transition: all .2s;
+}
+
+.arrow-container:hover{
+    cursor: pointer;
+    background-color: #ddd;
+    border: 2px rgb(0, 0, 0) solid;
+}
+
+.arrow{
+    display: inline-block;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    height: 5px;
+    width: 5px;
+}
+
+.arrow-down {
+    transform: translateY(-2.5px) rotate(45deg) ;
+}
+
+.arrow-up{
+    transform: rotate(-135deg);
+}

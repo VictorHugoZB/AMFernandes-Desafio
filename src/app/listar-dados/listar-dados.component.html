@@ -1,0 +1,55 @@
+<table class="tabela-imoveis" *ngIf = "listaImoveis.length > 0">
+    <thead class="tabela-header">
+        <tr>
+            <th>Nome
+                <div class="all-arrows-container">
+                    <div class="arrow-container" (click) = "sortBy('nome', 1)"><span class = "arrow arrow-up"></span></div>
+                    <div class="arrow-container" (click) = "sortBy('nome', -1)"><span class = "arrow arrow-down"></span></div>
+                </div>
+            </th>
+            <th>Cidade
+                <div class="all-arrows-container">
+                    <div class="arrow-container" (click) = "sortBy('cidade', 1)"><span class = "arrow arrow-up"></span></div>
+                    <div class="arrow-container" (click) = "sortBy('cidade', -1)"><span class = "arrow arrow-down"></span></div>
+                </div>
+            </th>
+            <th>Bairro
+                <div class="all-arrows-container">
+                    <div class="arrow-container" (click) = "sortBy('bairro', 1)"><span class = "arrow arrow-up"></span></div>
+                    <div class="arrow-container" (click) = "sortBy('bairro', -1)"><span class = "arrow arrow-down"></span></div>
+                </div>
+            </th>
+            <th>Metragem
+                <div class="all-arrows-container">
+                    <div class="arrow-container" (click) = "sortByInsidePlanta('metragem', 1)"><span class = "arrow arrow-up"></span></div>
+                    <div class="arrow-container" (click) = "sortByInsidePlanta('metragem', -1)"><span class = "arrow arrow-down"></span></div>
+                </div>
+            </th>
+            <th>Vagas
+                <div class="all-arrows-container">
+                    <div class="arrow-container" (click) = "sortByInsidePlanta('vagas', 1)"><span class = "arrow arrow-up"></span></div>
+                    <div class="arrow-container" (click) = "sortByInsidePlanta('vagas', -1)"><span class = "arrow arrow-down"></span></div>
+                </div>
+            </th>
+            <th>Preço
+                <div class="all-arrows-container">
+                    <div class="arrow-container" (click) = "sortByInsidePlanta('preco', 1)"><span class = "arrow arrow-up"></span></div>
+                    <div class="arrow-container" (click) = "sortByInsidePlanta('preco', -1)"><span class = "arrow arrow-down"></span></div>
+                </div>
+            </th>
+        </tr>
+    </thead>
+    <tbody class="tabela-body">
+        <tr *ngFor = "let imovel of listaImoveis">
+            <td>{{ imovel.nome }}</td>
+            <td>{{ imovel.cidade }}</td>
+            <td>{{ imovel.bairro }}</td>
+            <td *ngIf = "imovel.planta && imovel.planta.metragem; else nullValue">{{ imovel.planta.metragem | number: '1.0-0' }}m²</td>
+            <td *ngIf = "imovel.planta && imovel.planta.vagas; else nullValue">{{ imovel.planta.vagas }}</td>
+            <td *ngIf = "imovel.planta && imovel.planta.preco; else nullValue">{{ imovel.planta.preco | currency: 'BRL' }}</td>
+            <ng-template #nullValue>
+                <td> - </td>
+            </ng-template>
+        </tr>
+    </tbody>
+</table>

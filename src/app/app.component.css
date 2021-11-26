@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+header{
+    margin-bottom: 10vh;
+    font-family: 'roboto', sans-serif;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    color: #eee;
+    font-weight: bold;
+}
+
+.header-div-1{
+    height: 100vh;
+    width: 100%;
+    background-color: #00355e;
+    background-image: url(../assets/logo-vertical.png);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+
+.header-div-2{
+    height: 400px;
+    width: 100%;
+    background-color: #000000;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1) 50%), url(../assets/hd-bg.jpg);
+    background-size: auto, auto 100%;
+    background-repeat: no-repeat, no-repeat;
+    position: relative;
+}
+
+.header-div-2 div{
+    position: absolute;
+    width: 30%;
+    right: 10%;
+    height: inherit;
+}
+
+.header-div-2 div p{
+    text-align: left;
+    margin: 50px auto;
+}
+
+footer {
+    height: 35vh;
+    background-color: #00355e;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-family: 'roboto', sans-serif;
+    letter-spacing: 1px;
+}
+
+.footer-flexdiv1 p, .footer-flexdiv2 p{
+    margin: 2vw 0;
+}
+.footer-flexdiv1 p:first-child, .footer-flexdiv2 p:first-child{
+    font-weight: bolder;
+}
+
+.footer-flexdiv1 {
+    flex: 3;
+    text-align: center;
+}
+
+.footer-flexdiv2 {
+    box-sizing: border-box;
+    padding: 0 6%;
+    flex: 3;
+    text-align: center;
+    border-right: white 1px solid;
+    border-left: white 1px solid;
+
+}
+
+.footer-flexdiv3{
+    flex: 3;
+    text-align: center;
+}
+
+.footer-flexdiv3 a{
+    display: inline-block;
+    color: white;
+    margin: 20px;
+}
+
+.footer-flexdiv3 a:hover{
+    color: #bbb;
+}
