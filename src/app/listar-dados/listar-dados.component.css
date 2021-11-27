@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+.table-container{
+    width: 80%;
+    overflow-x: auto;
+    margin: 20vh auto;
+}
 .tabela-imoveis{
     font-family: Arial, sans-serif;
     font-size: 0.95em;
     border-collapse: collapse;
     text-align: center;
-    width: 80%;
-    margin: 20vh auto;
+    margin: 0 auto;
 }
 
 .tabela-header th, .tabela-body td{
     border: 1px solid rgb(158, 158, 158);
-    height: 50px;
     min-width: 140px;
     padding: 0 10px;
 }
@@ -19,6 +22,11 @@
 .tabela-header th{
     background-color: #00355e;
     color: #fff;
+}
+
+.tabela-imoveis tr{
+    height: 8vh;
+    min-height: 1000px;
 }
 
 .tabela-body tr:nth-child(even){

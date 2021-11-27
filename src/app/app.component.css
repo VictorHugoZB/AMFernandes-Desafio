@@ -32,6 +32,7 @@ header{
 .header-div-2 div{
     position: absolute;
     width: 30%;
+    min-width: 400px;
     right: 10%;
     height: inherit;
 }
@@ -39,17 +40,25 @@ header{
 .header-div-2 div p{
     text-align: left;
     margin: 50px auto;
+    padding-left: 5%;
 }
 
 footer {
-    height: 35vh;
+    font-family: 'roboto', sans-serif;
+    letter-spacing: 1px;
     background-color: #00355e;
+    color: white;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    color: white;
-    font-family: 'roboto', sans-serif;
-    letter-spacing: 1px;
+}
+
+.footer-flexdiv1 {
+    text-align: center;
+    flex-basis: auto;
+    min-width: 300px;
+    width: 30%;
 }
 
 .footer-flexdiv1 p, .footer-flexdiv2 p{
@@ -59,30 +68,29 @@ footer {
     font-weight: bolder;
 }
 
-.footer-flexdiv1 {
-    flex: 3;
-    text-align: center;
-}
-
 .footer-flexdiv2 {
     box-sizing: border-box;
-    padding: 0 6%;
-    flex: 3;
+    width: 40%;
+    min-width: 300px;
+    padding: 0 3%;
     text-align: center;
     border-right: white 1px solid;
     border-left: white 1px solid;
-
+    flex-basis: auto;
+    overflow-x: auto;
 }
 
 .footer-flexdiv3{
-    flex: 3;
     text-align: center;
+    width: 30%;
+    min-width: 250px;
 }
 
 .footer-flexdiv3 a{
     display: inline-block;
     color: white;
     margin: 20px;
+    flex-basis: auto;
 }
 
 .footer-flexdiv3 a:hover{
