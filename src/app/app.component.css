@@ -96,3 +96,74 @@ footer {
 .footer-flexdiv3 a:hover{
     color: #bbb;
 }
+
+@media (max-width:415px) and (orientation: portrait){
+
+    .header-div-2{
+        height: auto;
+        background-color: #000000;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95) 50%), url(../assets/hd-bg.jpg);
+        background-size: auto, auto 100%;
+        background-repeat: no-repeat, no-repeat;
+    }
+
+    .header-div-2 div{
+        position:static;
+        width: auto;
+        height: inherit;
+        padding: 10% 5%;
+        min-width: 0;
+    }
+    
+     .header-div-2 div p{
+        font-size: 0.9em;
+        margin: 0;
+        padding: 5%;
+    } 
+
+    footer {
+        flex-direction: column;
+        height: auto;
+    }
+    .footer-flexdiv1, .footer-flexdiv2, .footer-flexdiv3{
+        padding: 5vh 0;
+        border: none;
+        text-align: center;
+        flex-basis: auto;
+        width: 80%;
+        height:auto;
+    }
+    .footer-flexdiv2 {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+    .footer-flexdiv1 p, .footer-flexdiv2 p, .footer-flexdiv3 p{
+        margin: 2vh;
+    }
+    .footer-flexdiv3 a{
+        margin: 10px;
+    }
+}
+
+@media (max-width:927px) and (orientation:landscape){
+    footer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .footer-flexdiv1, .footer-flexdiv2, .footer-flexdiv3{
+        padding: 5vh 0;
+        border: none;
+        text-align: center;
+        flex-basis: auto;
+        width: 80%;
+        height:auto;
+    }
+    .footer-flexdiv2 {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+    .footer-flexdiv1 p, .footer-flexdiv2 p, .footer-flexdiv3 p{
+        margin: 2vh;
+    }
+}
